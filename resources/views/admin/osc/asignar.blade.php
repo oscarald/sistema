@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SLI')
+@section('title', 'SILA')
 
 @section('content_header')
     <h1>Asignacion de trámites a los revisores</h1>

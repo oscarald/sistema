@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SLI')
+@section('title', 'SILA')
 
 @section('content_header')
     <h1>Estado de los trámites</h1>
@@ -40,25 +40,25 @@
             <td>
                 @switch($tramite->tipo)
                 @case('FNCA')
-                    5 días
+                    3 días hábiles
                     @break
                 @case('PPM-PASA')
-                    10 días
+                    10 días hábiles
                     @break
                 @case('EEIA-AE')
-                    15 días
+                    15 días hábiles
                     @break
                 @case('EEIA-AI')
-                    20 días
+                    15 días hábiles
                     @break
                 @case('Manifiesto Ambiental')
-                    25 días
+                    15 días hábiles
                     @break
                 @case('Renovacion')
-                    30 días
+                    15 días hábiles
                     @break
                 @case('ITE')
-                    35 días
+                    5 días hábiles
                     @break
             
                 @default

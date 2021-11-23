@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SLI')
+@section('title', 'SILA')
 
 @section('content_header')
     <h1>Crear tramite</h1>
@@ -54,7 +54,7 @@
                 </div>
             <h3>Documentación</h3>
                 <div class="row mb-3">
-                    {!! Form::label('documento', 'Documentación (Solo PDF-Max. 50MB)', ['class' => 'mb-3 col-sm-2 col-form-label']) !!}
+                    {!! Form::label('documento', 'Documentación (Solo PDF-Max. 200MB)', ['class' => 'mb-3 col-sm-2 col-form-label']) !!}
                     {!! Form::file('documento', ['class' => 'form-control col-sm-10', 'accept' => 'application/pdf']) !!}
                     @error('documento')
                     <span class="text-danger">{{$message}}</span>

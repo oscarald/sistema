@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SLI')
+@section('title', 'SILA')
 
 @section('content_header')
     <h1>Revisar trámites terminados por el revisor</h1>

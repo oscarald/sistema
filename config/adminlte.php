@@ -45,9 +45,9 @@ return [
     |
     */
 
-    'logo' => '<b>Sistema</b>SILA',
+    'logo' => '',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class' => 'img-thumbnail img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'AdminLTE',
@@ -246,51 +246,51 @@ return [
         ],
 
         [
-            'text' => 'Nuevo Tramite',
+            'text' => 'Nuevo Trámite',
             'route'  => 'admin.tramites.create',
             'icon' => 'far fa-folder-open',
             'can'  => 'admin.tramites.create',
         ],
         [
-            'text' => 'Busqueda de tramites',
+            'text' => 'Busqueda de Trámites',
             'route'  => 'admin.tramites.index',
             'icon' => 'fas fa-search',
             'can'  => 'admin.tramites.index',
         ],
 
         [
-            'text' => 'Asignacion de tramites OSC',
+            'text' => 'Asignacion de Trámites OSC',
             'route'   => 'admin.osc.asignar',
             'icon' => 'fab fa-black-tie',
             'can'  => 'admin.osc.asignar',
         ],
         [
-            'text' => 'Revisar de tramites OSC',
+            'text' => 'Revisar Trámites OSC',
             'route'  => 'admin.osc.revisor',
             'icon' => 'fas fa-file-import',
             'can'  => 'admin.osc.revisor',
         ],
         [
-            'text' => 'Estado de los trámites OSC',
+            'text' => 'Estado de los Trámites OSC',
             'route'  => 'admin.osc.estado',
             'icon' => 'fas fa-clipboard-check',
             'can'  => 'admin.osc.estado',
         ],
 
         [
-            'text' => 'Asignacion de tramites AACN',
+            'text' => 'Asignacion de Trámites AACN',
             'route'   => 'admin.aacn.asignar',
             'icon' => 'fab fa-black-tie',
             'can'  => 'admin.aacn.asignar',
         ],
         [
-            'text' => 'Revisar de tramites AACN',
+            'text' => 'Revisar Trámites AACN',
             'route'  => 'admin.aacn.revisor',
             'icon' => 'fas fa-file-import',
             'can'  => 'admin.aacn.revisor',
         ],
         [
-            'text' => 'Estado de los trámites AACN',
+            'text' => 'Estado de los Trámites AACN',
             'route'  => 'admin.aacn.estado',
             'icon' => 'fas fa-clipboard-check',
             'can'  => 'admin.aacn.estado',

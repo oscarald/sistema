@@ -55,7 +55,8 @@
             <span class="text-danger">{{$message}}</span>
             @enderror
         </div>
-        {!! Form::submit('Enviar Resolución', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Enviar Resultado de la Revision', ['class' => 'btn btn-primary']) !!}
+        <a href="/admin" class="btn btn-danger ml-4">Cancelar</a>
     {!! Form::close() !!}
     </div>  
 </div>

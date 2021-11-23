@@ -61,6 +61,7 @@
                     @enderror
                 </div>
                 {!! Form::submit('Enviar Trámite', ['class' => 'btn btn-primary']) !!}
+                <a href="/admin" class="btn btn-danger ml-4">Cancelar</a>
             {!! Form::close() !!}
         </div>
         

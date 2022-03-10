@@ -58,15 +58,9 @@ class UserController extends Controller
 
         $revisor->save();
 
-        return redirect()->route('admin.users.index')->with('info', 'Se creo el usuario correctamente.');
+        return redirect()->route('admin.users.index')
+        ->with('info', 'Se creo el usuario correctamente.');
     }
-
-
-    public function show($id)
-    {
-        //
-    }
-
 
     public function edit(User $user)
     {
@@ -80,13 +74,14 @@ class UserController extends Controller
     {
         $user->roles()->sync($request->roles);
 
-        return redirect()->route('admin.users.index')->with('info', 'Se actualizaron los roles correctamente');
+        return redirect()->route('admin.users.index')
+        ->with('info', 'Se actualizaron los roles correctamente');
     }
-
 
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('admin.users.index')->with('info', 'Se eliminó el usuario correctamente');
+        return redirect()->route('admin.users.index')
+        ->with('info', 'Se eliminó el usuario correctamente');
     }
 }

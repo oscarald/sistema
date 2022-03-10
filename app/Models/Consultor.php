@@ -9,7 +9,8 @@ class Consultor extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['renca', 'ci', 'domicilio', 'ciudad', 'departamento', 'telefono', 'user_id'];
+    protected $fillable = ['renca', 'ci', 'domicilio', 'ciudad', 
+    'departamento', 'telefono', 'user_id'];
 
     public function user(){
         return $this->belongsTo('App\Models\User');
@@ -18,6 +19,5 @@ class Consultor extends Model
     public function consultors(){
         return $this->hasMany('App\Models\Consultor');
     }
-
 
 }

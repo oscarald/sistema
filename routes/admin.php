@@ -15,6 +15,7 @@ Route::resource('users', UserController::class)->names('admin.users');
 Route::resource('tramites', TramiteController::class)->names('admin.tramites');
 
 Route::get('observacionosc/{id}', [ObservacionController::class, 'download'])->name('admin.obserosc.download');
+Route::get('observacionaacn/{id}', [ObservacionController::class, 'download2'])->name('admin.obseraacn.download');
 
 Route::get('asignar', [OscController::class, 'asignar'])->name('admin.osc.asignar');
 Route::post('aceptar', [OscController::class, 'aceptar'])->name('admin.osc.aceptar');

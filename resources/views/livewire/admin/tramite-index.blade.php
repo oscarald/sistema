@@ -81,6 +81,7 @@
                                 @isset($tramite->obseraacn)
                                     <p><a href="observacionaacn/{{$tramite->id}}" class="btn btn-info">Descargar Informe de Revisión AACN</a></p>
                                         @if($tramite->estado == 7)
+                                        
                                             <a href="{{ route('admin.tramites.edit', $tramite->id )}}" class="btn btn-warning">Corregir observaciones</a>
                                         
                                         @endif

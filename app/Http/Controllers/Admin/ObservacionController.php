@@ -15,4 +15,12 @@ class ObservacionController extends Controller
         return Storage::download($tramite->obserosc);
         //return $tramite;
     }
+
+    public function download2($id)
+    {
+        $tramite = Tramite::find($id);
+        return Storage::download($tramite->obseraacn);
+        //return $tramite;
+    }
 }
+

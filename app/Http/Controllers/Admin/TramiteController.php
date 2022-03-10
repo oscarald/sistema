@@ -12,40 +12,23 @@ use Illuminate\Support\Facades\Storage;
 
 class TramiteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
 
         $datos = Consultor::where('user_id',Auth::id())->first();
-        // dd($datos);
-        // Debugbar::error('hello');
-
         $tramites = Tramite::all();
-        // dd($tramites);
+
         return view('admin.tramites.index', compact('datos', 'tramites', ));
     }
 
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('admin.tramites.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         
@@ -64,26 +47,17 @@ class TramiteController extends Controller
             $tramite->estado = 5;
         }
         $tramite->save();
-        return redirect()->route('admin.tramites.index')->with('info', 'El trámite se mando correctamente');
+        return redirect()->route('admin.tramites.index')
+        ->with('info', 'El trámite se mando correctamente');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Tramite $tramite)
     {
         return view('admin.tramites.show', compact('tramite'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $tramite = Tramite::find($id);
@@ -91,13 +65,7 @@ class TramiteController extends Controller
         return view('admin.tramites.edit', compact('tramite'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Tramite $tramite)
     {
         //return $tramite;
@@ -124,22 +92,8 @@ class TramiteController extends Controller
         $tramite->user_id = NULL;
         
         $tramite->save();
-        return redirect()->route('admin.tramites.index')->with('info', 'El trámite corregido se mando correctamente');
-
-
+        return redirect()->route('admin.tramites.index')
+        ->with('info', 'El trámite corregido se mando correctamente');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Tramite $tramite)
-    {
-        //
-    }
-
-
 
 }
